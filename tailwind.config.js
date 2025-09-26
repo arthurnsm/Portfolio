@@ -1,46 +1,42 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class", 
+  // 1. Onde o Tailwind vai procurar por classes no seu projeto
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html",
+  ],
+  
+  // 2. Extensões e configurações personalizadas
   theme: {
     extend: {
+      // Cores personalizadas
       colors: {
-       
-        light: {
-          bg: "#0D0D0D",         
-          card: "#1A1A1D",         
-          text: {
-            primary: "#EDEDED",    
-            secondary: "#9CA3AF",  
-          },
-          border: "#390E7C",        
-          primary: {
-            DEFAULT: "#9D00FF",   
-            hover: "#B85CFF",       
-          },
-        },
-
-    
-        dark: {
-          bg: "#0D0D0D",           
-          card: "#1A1A1D",       
-          text: {
-            primary: "#EDEDED",
-            secondary: "#9CA3AF",   
-          },
-          border: "#27272A",        
-          primary: {
-            DEFAULT: "#7C3AED",
-            secondary: "#9D00FF",    
-            hover: "#B85CFF",       
-          },
-        },
+        'dark-bg': '#121212',
+        'purple-neon': '#9B51E0',
       },
-        fontFamily: {
-        outfit: ['"Outfit"', "sans-serif"],
-        inter: ['"Inter"', "sans-serif"],
-        agdasima: ['"Agdasima"', "sans-serif"],
+
+      // Animações
+      animation: {
+        'fade-in': 'fadeIn 1s ease-in-out',
+        'fade-in-up': 'fadeInUp 1s ease-out',
+      },
+      
+      // Keyframes (como a animação se comporta)
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        fadeInUp: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
       },
     },
   },
-  plugins: [],
-};
+  
+  // 3. Plugins adicionais
+  plugins: [
+    require('tailwindcss-animation-delay'),
+  ],
+}

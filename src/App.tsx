@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-    <header className="justify-center p-10 flex"> 
+    <header className="justify-center p-10  hidden md:flex"> 
       <Navbar />
     </header>
     <main>

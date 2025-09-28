@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar"
-import Home from "./assets/pages/home"
-
+import Home from "./pages/home"
+import About from './pages/about'
 function App() {
 
   return (
@@ -10,6 +10,7 @@ function App() {
     </header>
     <main>
       <Home />
+      <About  />
     </main>
     </>
   )

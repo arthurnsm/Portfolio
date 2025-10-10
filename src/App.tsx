@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar"
 import Home from "./pages/home"
 import About from './pages/about'
+import Projects from "./pages/projects"
 function App() {
 
   return (
@@ -8,9 +9,10 @@ function App() {
     <header className="justify-center p-10  hidden md:flex"> 
       <Navbar />
     </header>
-    <main>
+    <main className="">
       <Home />
       <About  />
+      <Projects />
     </main>
     </>
   )

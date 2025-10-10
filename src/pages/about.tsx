@@ -3,7 +3,7 @@ import Stack from '../components/stacks'
 
 const fadeVariant = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: "easeOut" as const} },
 };
 function About (){
     return(
@@ -32,8 +32,8 @@ function About (){
                     </motion.div>
 
                 </div>
-                <div className='flex flex-col w-92 md:w-250 md:ml-10 mt-4 px-6 '>
-                    <span className='text-white font-[inter] text-center md:text-start md:text-3xl'>
+                <div className='flex flex-col w-92 md:w-250 md:ml-4 mt-4 px-6 '>
+                    <span className='text-white font-[inter] text-center md:text-start md:text-2xl'>
                         Desde muito novo tenho uma paixão inexplicavel por tudo relacionado a <span className='text-[#8b56db]'>tecnologia</span> no geral.
                         Aos 12 anos descobri a <span className='text-[#8b56db]'>programação</span> e fiquei encantado com o universo de possibilidades que existem na área.
                         Com o passar do tempo, descobri também o gosto pelo <span className='text-[#8b56db]'>design</span>. Juntando o útil ao agradável, decidi me dedicar 

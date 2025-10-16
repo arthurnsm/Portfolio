@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <header className="justify-center p-10  hidden md:flex"> 
+    <header className="justify-center p-4  hidden md:flex"> 
       <Navbar />
     </header>
     <main className="">

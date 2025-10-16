@@ -13,14 +13,14 @@ function About (){
         initial="hidden" 
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-            id="about">
+            id="about" className="flex flex-col justify-center items-center mx-10">
                 <div className='text-center mt-20 md:mt-30'>
                     <span className="text-[#8E79D9] font-[inter] font-thin text-4xl md:text-5xl">SOBRE MIM</span>
                 </div>
             <div className="flex md:flex-row flex-col justify-center align-center items-center mt-8">
             <div className='flex md:flex-row flex-col justify-center align-center items-center md:mt-20'>
                 <div className=''>
-                    <motion.div className='md:w-[500px] md:h-[500px] w-[250px] h-[200px] border-2 border-[#390E7C]  md:rounded-[148px_40px] rounded-[80px_20px]  align-center flex justify-center items-center'>
+                    <motion.div className='max-w-[500px] w-full  h-auto border-2 border-[#390E7C]  md:rounded-[148px_40px] rounded-[80px_20px]  align-center flex justify-center items-center'>
                         <motion.img
                             initial={{ scale: 0, rotate: -10 }}
                             animate={{ scale: 1, rotate: 0 }}
